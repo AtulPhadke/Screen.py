@@ -5,6 +5,7 @@ import requests
 from pprint import pprint
 
 
+
 pygame.init()
 screen = pygame.display.set_mode((1024, 600))
 rectBlack = pygame.Rect(0, 0, 1024, 600)
