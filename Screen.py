@@ -9,7 +9,7 @@ pygame.init()
 screen = pygame.display.set_mode((1024, 600))
 rectBlack = pygame.Rect(0, 0, 1024, 600)
 clock = pygame.time.Clock()
- def ResetButton():
+def ResetButton():
     x, y = pygame.mouse.get_pos()
     if x >= 750 and x <= 1025 and y <= 700 and y >= 500:
         button = pygame.image.load("HoverRoundedRectangle.png")
@@ -25,7 +25,7 @@ clock = pygame.time.Clock()
         screen.blit(button, (750, 500))
 
 def Megamanand10800A():
-    megaman = "Megaman/sprite_09.png"
+    megaman = "Megman/sprite_09.png"
     loadingicons = pygame.image.load(megaman)
     loadingicons = pygame.transform.scale(loadingicons, (200, 200))
     screen.blit(loadingicons, (780, 180))
@@ -146,17 +146,17 @@ def GetWeatherTempData(temp, templow, temphigh, weathers):
         x = datetime.datetime.now()
         if temp <= 40:
             status = 'Cold'
-            Status = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 30)
+            Status = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 30)
             ColdHotMild = Status.render(status, 10, (255, 255, 255))
             #screen.blit(s, (20, 100))
         elif temp >= 80:
             status = 'Hot'
-            Status = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 30)
+            Status = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 30)
             ColdHotMild = Status.render(status, 10, (255, 255, 255))
             #screen.blit(s, (20, 100))
         else:
             status = 'Mild'
-            Status = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 30)
+            Status = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 30)
             ColdHotMild = Status.render(status, 10, (255, 255, 255))
             #screen.blit(s, (20, 100))
         if weathers == 'Rain':
@@ -209,11 +209,11 @@ def GetWeatherTempData(temp, templow, temphigh, weathers):
                 #screen.blit(weathericon, (340, 10))
         return DNweathericon, Wweathericon, ColdHotMild
 def displayWeatherData():
-        temperature = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 75)
+        temperature = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 75)
         Temps = temperature.render(str(int(temp)) + " °F", 50, (255, 255, 255))
-        temperaturelow = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 20)
+        temperaturelow = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 20)
         low = temperaturelow.render(str(int(templow))+ " °F", 25, (255, 255, 255))
-        temperaturehigh = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 20)
+        temperaturehigh = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 20)
         high = temperaturehigh.render(str(int(temphigh))+ " °F", 25, (255, 255, 255))
         screen.blit(Temps, (20, 20))
         screen.blit(low, (330, 120))
@@ -222,15 +222,15 @@ def displayWeatherData():
         screen.blit(Wweathericon, (220, 10))
         screen.blit(ColdHotMild, (20, 100))
 def Title():
-    Title = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 25)
+    Title = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 25)
     title = Title.render("Water Dispensed", 50, (255, 255, 255))
     screen.blit(title, (20, 450))
 def Time():
     z = datetime.datetime.now()
     screen.fill((0,0,0))
-    Time = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 50)
-    Time1 = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 25)
-    Time2 = pygame.font.Font('/Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 25)
+    Time = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 50)
+    Time1 = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 25)
+    Time2 = pygame.font.Font('Users/atulphadke/Downloads/NanumGothic-Regular.ttf', 25)
     y = Time.render(z.strftime("%H:%M:%S"), 50, (255, 255, 255))
     q = Time1.render(z.strftime("%b %d %Y"), 50, (255, 255, 255))
     screen.blit(y, (780, 20))
